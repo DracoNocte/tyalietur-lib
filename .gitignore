@@ -1,0 +1,15 @@
+# Environnement
+.env
+
+# Production (allowed to bu used as package on GitHub)
+# dist/
+
+# Modules Node.js
+node_modules/
+
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/versions
