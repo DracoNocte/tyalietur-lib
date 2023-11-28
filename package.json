@@ -2,13 +2,18 @@
   "name": "tyalietur-lib",
   "version": "0.0.1",
   "description": "Common lib for Tyalietur bot and API",
-  "main": "dist/main.js",
-  "types": "dist/main.d.ts",
-  "module": "dist/main.esm.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "module": "lib-esm/index.js",
+  "files": [
+    "/lib",
+    "/lib-esm"
+  ],
   "scripts": {
-    "start": "ts-node src/main.ts",
-    "build": "rollup -c --bundleConfigAsCjs",
-    "clean": "rm -rf dist/",
+    "build": "npm run clean && npm run build:lib && npm run build:lib-esm",
+    "build:lib": "tsc && tsc-alias",
+    "build:lib-esm": "tsc --module es2015 --outDir lib-esm && tsc-alias --outDir lib-esm",
+    "clean": "rm -rf lib lib-esm",
     "test": "jest --passWithNoTests",
     "test:cov": "jest --coverage",
     "test:ci": "jest --coverage --ci --runInBand",
@@ -17,27 +22,21 @@
   },
   "author": "Draco Nocte <dragonnight.gaming@gmail.com>",
   "license": "MIT",
-  "files": [
-    "/dist"
-  ],
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@types/jest": "^29.5.8",
-    "@types/node": "^20.9.0",
-    "@typescript-eslint/eslint-plugin": "^6.10.0",
-    "@typescript-eslint/parser": "^6.10.0",
-    "eslint": "^8.53.0",
+    "@types/jest": "^29.5.10",
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "discord.js": "^14.14.1",
+    "eslint": "^8.54.0",
     "eslint-config-prettier": "^9.0.0",
     "jest": "^29.7.0",
-    "prettier": "^3.0.3",
-    "rollup": "^4.3.0",
-    "rollup-plugin-typescript2": "^0.36.0",
+    "prettier": "^3.1.0",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
+    "tsc-alias": "^1.8.8",
     "tslib": "^2.6.2",
-    "type-fest": "^4.6.0",
+    "type-fest": "^4.8.2",
     "typescript": "~5.2.2"
-  },
-  "packageManager": "yarn@4.0.1"
+  }
 }

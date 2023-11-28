@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "baseUrl": ".",
+    "outDir": "lib",
+    "target": "ES5",
     "lib": ["ESNext"],
     "declaration": true,
     "strict": true,
@@ -14,7 +16,10 @@
     "noImplicitReturns": true,
     "isolatedModules": true,
     "strictPropertyInitialization": true,
-    "strictFunctionTypes": true
+    "strictFunctionTypes": true,
+    "paths": {
+      "@models": ["src/models"]
+    }
   },
   "include": ["src/**/*.ts"],
   "exclude": ["src/**/*.spec.ts"]
