@@ -1,5 +1,3 @@
-import type { ShortUuid } from '@models';
+import type { ShortUuid } from '@models/common';
 
 export type CharacterOid = ShortUuid;
-
-export {};

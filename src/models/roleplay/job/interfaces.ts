@@ -1,4 +1,5 @@
-import type { Assets, JobCategoryOid, JobLevels, JobOid } from '@models';
+import type { Assets } from '../asset';
+import type { JobOid, JobCategoryOid, JobLevels } from './types';
 
 export interface Job {
   _id: JobOid;
@@ -18,5 +19,3 @@ export interface JobLevel {
   minimumIncome: Assets;
   maximumIncome: Assets;
 }
-
-export {};

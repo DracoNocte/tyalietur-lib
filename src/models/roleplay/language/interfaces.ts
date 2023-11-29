@@ -1,4 +1,5 @@
-import type { LanguageOid, LanguageScriptOid, LearningDifficulty, LinkType, UsageRarity } from '@models';
+import type { UsageRarity, LearningDifficulty, LinkType } from './enums';
+import type { LanguageOid, LanguageScriptOid } from './types';
 
 export interface Language {
   _id: LanguageOid;
@@ -21,5 +22,3 @@ export interface LanguageLink {
   id: LanguageOid;
   link: LinkType;
 }
-
-export {};

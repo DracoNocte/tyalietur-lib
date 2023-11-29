@@ -1,5 +1,6 @@
-import type { LanguageOid, PeopleGroupOid, PeopleOid } from '@models';
 import type { HexColorString } from 'discord.js';
+import type { LanguageOid } from '../language';
+import type { PeopleOid, PeopleGroupOid } from './types';
 
 export interface People {
   _id: PeopleOid;
@@ -16,7 +17,7 @@ export interface People {
 export interface PeopleGroup {
   _id: PeopleGroupOid;
   name: string;
-  height: PeopleHeight;
+  height: PeopleGroupHeight;
   /** En années ; `-1` correspond à l'immortalité. */
   lifespan: number;
 }
@@ -27,7 +28,7 @@ export interface PeopleColorScheme {
   tertiary?: HexColorString;
 }
 
-export interface PeopleHeight {
+export interface PeopleGroupHeight {
   /** En centimètres. */
   min: number;
   /** En centimètres. */
@@ -35,5 +36,3 @@ export interface PeopleHeight {
   /** En centimètres. */
   avg: number;
 }
-
-export {};
