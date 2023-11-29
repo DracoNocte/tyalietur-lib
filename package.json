@@ -2,18 +2,21 @@
   "name": "tyalietur-lib",
   "version": "0.0.0",
   "description": "Common lib for Tyalietur bot and API",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "module": "lib-esm/index.js",
+  "main": "./lib/tyalietur-lib.umd.cjs",
+  "module": "./lib/tyalietur-lib.mjs",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/tyalietur-lib.mjs",
+      "require": "./lib/tyalietur-lib.umd.cjs"
+    }
+  },
   "files": [
-    "/lib",
-    "/lib-esm"
+    "lib"
   ],
   "scripts": {
-    "build": "npm run clean && npm run build:lib && npm run build:lib-esm",
-    "build:lib": "tsc && tsc-alias",
-    "build:lib-esm": "tsc --module es2015 --outDir lib-esm && tsc-alias --outDir lib-esm",
-    "clean": "rm -rf lib lib-esm",
+    "build": "npm run clean && vite build",
+    "clean": "rm -rf ./lib",
     "test": "jest --passWithNoTests",
     "test:cov": "jest --coverage",
     "test:ci": "jest --coverage --ci --runInBand",
@@ -41,9 +44,11 @@
     "prettier": "^3.1.0",
     "release-it": "^17.0.0",
     "ts-jest": "^29.1.1",
-    "tsc-alias": "^1.8.8",
     "tslib": "^2.6.2",
     "type-fest": "^4.8.2",
-    "typescript": "~5.2.2"
+    "typescript": "~5.2.2",
+    "vite": "^5.0.3",
+    "vite-plugin-dts": "^3.6.3",
+    "vite-tsconfig-paths": "^4.2.1"
   }
 }

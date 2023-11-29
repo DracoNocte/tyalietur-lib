@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "lib",
-    "target": "ES5",
+    "target": "ESNext",
     "lib": ["ESNext"],
     "declaration": true,
     "strict": true,

@@ -4,7 +4,7 @@ const commitTemplate = fs.readFileSync('commit-template.hbs').toString();
 
 module.exports = {
   hooks: {
-    'before:init': 'npm run build && git add lib/ lib-esm/',
+    'before:init': 'npm run build && git add lib/',
     'after:bump': 'npm install',
   },
   git: {
