@@ -18,7 +18,8 @@
     "strictPropertyInitialization": true,
     "strictFunctionTypes": true,
     "paths": {
-      "@models/*": ["src/models/*"]
+      "@models/*": ["src/models/*"],
+      "@domains/*": ["src/domains/*"]
     }
   },
   "include": ["src/**/*.ts"],

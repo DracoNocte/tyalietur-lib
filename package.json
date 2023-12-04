@@ -23,7 +23,8 @@
     "prettier": "prettier -c src",
     "lint": "eslint --max-warnings 0 src",
     "release": "release-it",
-    "release:dry": "release-it --dry-run"
+    "release:dry": "release-it --dry-run",
+    "sandbox": "ts-node -r tsconfig-paths/register  src/sandbox.ts"
   },
   "author": "Draco Nocte <dragonnight.gaming@gmail.com>",
   "license": "MIT",
@@ -44,6 +45,8 @@
     "prettier": "^3.1.0",
     "release-it": "^17.0.0",
     "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
     "tslib": "^2.6.2",
     "type-fest": "^4.8.2",
     "typescript": "~5.2.2",
