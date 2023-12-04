@@ -1,3 +1,2 @@
-import type { ShortUuid } from '../..';
+import type { ShortUuid } from '../../common';
 export type CharacterOid = ShortUuid;
-export {};

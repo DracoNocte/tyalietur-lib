@@ -1,3 +1,2 @@
-import type { Asset } from '../..';
+import type { Asset } from './enums';
 export type Assets = Partial<Record<Asset | string, number>>;
-export {};

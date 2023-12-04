@@ -1,4 +1,5 @@
-import type { LanguageOid, LanguageScriptOid, LearningDifficulty, LinkType, UsageRarity } from '../..';
+import type { UsageRarity, LearningDifficulty, LinkType } from './enums';
+import type { LanguageOid, LanguageScriptOid } from './types';
 export interface Language {
     _id: LanguageOid;
     name: string;
@@ -18,4 +19,3 @@ export interface LanguageLink {
     id: LanguageOid;
     link: LinkType;
 }
-export {};

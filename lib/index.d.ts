@@ -6,3 +6,4 @@ export * from './models/roleplay/language';
 export * from './models/roleplay/member';
 export * from './models/roleplay/meta';
 export * from './models/roleplay/people';
+export * from './domains/arda-date';

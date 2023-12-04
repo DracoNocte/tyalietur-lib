@@ -1,4 +1,9 @@
-import type { Assets, CharacterOid, CharacterType, Gender, ISO8601Date, MemberOid, PeopleOid, SocialRank } from '../..';
+import type { ISO8601Date } from '../../common';
+import type { Assets } from '../asset';
+import type { MemberOid } from '../member';
+import type { PeopleOid } from '../people';
+import type { CharacterType, Gender, SocialRank } from './enums';
+import type { CharacterOid } from './types';
 export interface Character {
     _id: CharacterOid;
     type: CharacterType;

@@ -1,4 +1,3 @@
-import { ShortUuid } from 'src/models/common';
+import type { ShortUuid } from '../../common';
 export type PeopleOid = ShortUuid;
 export type PeopleGroupOid = ShortUuid;
-export {};

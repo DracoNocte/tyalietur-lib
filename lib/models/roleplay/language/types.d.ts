@@ -1,4 +1,3 @@
-import type { ShortUuid } from '../..';
+import type { ShortUuid } from '../../common';
 export type LanguageOid = ShortUuid;
 export type LanguageScriptOid = ShortUuid;
-export {};

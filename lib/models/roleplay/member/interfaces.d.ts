@@ -1,5 +1,7 @@
-import type { CharacterOid, ISO8601Date, MemberOid, MemberRoleOid } from '../..';
+import type { ISO8601Date } from '../../common';
 import type { Snowflake } from 'discord.js';
+import type { CharacterOid } from '../character';
+import type { MemberOid, MemberRoleOid } from './types';
 export interface Member {
     _id: MemberOid;
     discordIds: Snowflake[];
@@ -14,4 +16,3 @@ export interface MemberRole {
     discordId: Snowflake;
     name: string;
 }
-export {};
