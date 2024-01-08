@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "paths": {
+      "@models/*": ["src/models/*"],
+      "@domains/*": ["src/domains/*", "test/domains/*"]
+    },
     "outDir": "lib",
     "target": "ESNext",
     "lib": ["ESNext"],
@@ -16,12 +20,8 @@
     "noImplicitReturns": true,
     "isolatedModules": true,
     "strictPropertyInitialization": true,
-    "strictFunctionTypes": true,
-    "paths": {
-      "@models/*": ["src/models/*"],
-      "@domains/*": ["src/domains/*"]
-    }
+    "strictFunctionTypes": true
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["src/**/*.spec.ts"]
+  "include": ["src/**/*.ts", "test/**/*.spec.ts"],
+  "exclude": ["lib", "node_modules"]
 }

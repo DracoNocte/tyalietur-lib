@@ -6,6 +6,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/guide/build.html#library-mode
 export default defineConfig({
+  appType: 'custom',
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
@@ -13,5 +14,10 @@ export default defineConfig({
     },
     outDir: 'lib',
   },
-  plugins: [tsconfigPaths(), dts()],
+  plugins: [
+    tsconfigPaths(),
+    dts({
+      tsconfigPath: resolve(__dirname, 'tsconfig.build.json'),
+    }),
+  ],
 });

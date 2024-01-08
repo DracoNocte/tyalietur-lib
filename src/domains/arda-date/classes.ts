@@ -101,7 +101,7 @@ export class ArdaDate {
       case ArdaDateAge.DaysBeforeDays:
       case ArdaDateAge.YearsOfTheLamps:
       case ArdaDateAge.YearsOfTheTrees:
-        return year * VALIAN_YEAR_DURATION + ARDA_DATE_AGE_BASE_TIME[age];
+        return Math.round(year * VALIAN_YEAR_DURATION + ARDA_DATE_AGE_BASE_TIME[age]);
       case ArdaDateAge.FirstAge:
       case ArdaDateAge.SecondAge:
       case ArdaDateAge.ThirdAge:

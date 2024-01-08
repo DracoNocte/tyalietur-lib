@@ -4,3 +4,5 @@
 # Modules Node.js
 node_modules/
 
+# Test Coverage
+coverage
